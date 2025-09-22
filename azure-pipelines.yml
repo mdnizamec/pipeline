@@ -23,6 +23,11 @@ steps:
 - task: AzureRmWebAppDeployment@5
   inputs:
       ConnectionType: 'AzureRM'
-      appType: 'webApp'
-      WebAppName: 
-      packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+- task: AzureRmWebAppDeployment@5
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'NizamS(cdabd22b-60cc-42ad-8636-0358c8697be6)'
+    appType: 'webApp'
+    WebAppName: 'webapp2'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+     
